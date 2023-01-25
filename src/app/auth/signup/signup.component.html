@@ -1,0 +1,42 @@
+<section >
+    <form  [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <mat-form-field color="primary">
+            <input type="email" matInput  placeholder="Enter your E-mail" formControlName="email"  >
+        <mat-error *ngIf="signupForm.get('email').touched">Field Must not be empty</mat-error>    
+        <mat-error *ngIf="signupForm.get('email').valid">E-Mail is Invalid</mat-error>
+        </mat-form-field>
+        <mat-form-field color="primary" hintLabel="Should be Atleast 8 char">    
+            <input type="password" placeholder="Enter Password" matInput  formControlName="password">
+            <mat-hint [align]=alignVar>{{ signupForm.get('password').value?.length }}/8</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput  [matDatepicker]="picker" formControlName="birthday" required [max]="maxDate">
+            <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Angular Material autocomplete</mat-label>
+            <input type="text"
+                   placeholder="Select country"
+                   aria-label="Country"
+                   matInput
+                   [formControl]="countryName"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption
+               #auto="matAutocomplete">
+              <mat-option *ngFor="let option of countryGroupOptions | async" 
+               [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        
+        <mat-checkbox formControlName="chkbox" required>
+            Agree With Terms and condition
+        </mat-checkbox>
+    
+        <div class="btn">  
+        <button type="submit" matripple mat-raised-button color="accent" [disabled]="signupForm.invalid">Submit</button>
+       </div>
+    </form>
+</section>

@@ -1,0 +1,18 @@
+<div class="cur">
+    <mat-spinner *ngIf="Spinner" (click)="stopSpinning()" ></mat-spinner>
+    <mat-card *ngIf="!Spinner">
+        <mat-card-title>Select your Framework</mat-card-title>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-select placeholder="Options">
+                    <mat-option value="React">React</mat-option>
+                    <mat-option value="Angular">Angular</mat-option>
+                    <mat-option value="Vue">Vue.js</mat-option>
+                </mat-select>       
+            </mat-form-field>
+            <button mat-raised-button color="accent" (click)="onStartTraining()" type="submit" value="start">Start</button>
+
+        </mat-card-content>
+
+    </mat-card>
+</div>

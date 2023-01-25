@@ -1,0 +1,23 @@
+.sec{
+    display:flex;
+    flex-direction: column;  
+    justify-content: center;
+   align-items: center;
+}
+mat-card{
+    display: flex;
+    width: 400px; height: 90px;
+    justify-content: center;
+   
+    align-items: center;
+    
+    background-color:  aliceblue;
+
+}
+mat-card.two{
+    background-color: brown;
+}
+
+button{
+ margin-left: 10px;
+}

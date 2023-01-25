@@ -1,0 +1,6 @@
+/node_modules
+/.angular/cache
+/.history
+/src/assets/.gitkeep
+
+package-lock.json

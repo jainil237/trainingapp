@@ -1,0 +1,10 @@
+mat-tab{
+    display:flex;
+}
+
+app-current{
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+
+}

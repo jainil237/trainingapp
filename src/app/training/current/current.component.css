@@ -1,0 +1,20 @@
+mat-card-title{
+  display: flex;
+    justify-content:center ;
+}
+mat-card{
+    background-color:lavender;
+}
+mat-form-field{
+    display: flex;
+    justify-content: center;
+}
+mat-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+mat-progress-spinner{
+  width: 10px;
+  height: 20px;
+}
